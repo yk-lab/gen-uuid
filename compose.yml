@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: gen_uuid
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: on-failure
+    volumes:
+      - ./app:/app:cached
+    ports:
+      - "8000"
